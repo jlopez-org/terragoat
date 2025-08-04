@@ -39,7 +39,6 @@ jobs:
 
     - name: Run Docker Container
       run: |
-        export MIN_LOG_LEVEL = DEBUG
         docker run --rm -v ${{ github.workspace }}:/home/code cortexcli:${{ env.CORTEX_CLI_VERSION }} \
           --api-base-url ${CORTEX_API_URL} \
           --api-key ${CORTEX_API_KEY} \
